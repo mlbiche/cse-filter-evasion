@@ -54,19 +54,24 @@
                         </select>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row email-row">
                     <div class="col">
-                        <h2>Received email</h2>
-                        <div class="email-content">
+                        <div class="card">
+                            <div class="card-header">
+                                Received email
+                            </div>
+                            <div class="card-body" id="email-content">
+
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <div class="alert alert-success" role="alert">
+                        <div class="alert alert-success filter-accept" role="alert">
                             This email is accepted by the anti-phishing filter.
                         </div>
-                        <div class="alert alert-danger" role="alert">
+                        <div class="alert alert-danger filter-block" role="alert">
                             <strong>DANGER!</strong> This email contains a malicious link.
                         </div>
                     </div>

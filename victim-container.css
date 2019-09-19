@@ -8,3 +8,12 @@
 #victim-container h1 {
     text-align: center;
 }
+
+#victim-container .email-row {
+    margin-top: 1rem;
+}
+
+#victim-container .filter-accept,
+#victim-container .filter-block {
+    display: none;
+}
