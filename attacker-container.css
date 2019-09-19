@@ -1,0 +1,16 @@
+#attacker-container {
+    width: 50%;
+    background-color: black;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#attacker-container h1 {
+    text-align: center;
+}
+
+.email-send-btn {
+    width: 100%;
+}

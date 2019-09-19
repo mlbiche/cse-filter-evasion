@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+    <title>Filter Evasion Demonstration</title>
+    
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="attacker-container.css" />
+    <link rel="stylesheet" href="victim-container.css" />
+
+    <!-- 
+        Bootstrap Stylesheet
+        https://getbootstrap.com/docs/4.3/getting-started/introduction/
+    -->
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+</head>
+<body>
+    <div id="main-container">
+        <div id="attacker-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1>Attacker</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <form>
+                            <div class="form-group">
+                                <label for="email-preparation-input">Email preparation</label>
+                                <textarea class="form-control" id="email-preparation-input" rows="10"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-outline-light email-send-btn">Send !</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="victim-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1>Victim</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <select class="custom-select">
+                            <option value="no-filter" selected>No anti-phishing filter</option>
+                            <option value="filter-1">Phishing filter 1</option>
+                            <option value="filter-2">Phishing filter 2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h2>Received email</h2>
+                        <div class="email-content">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="alert alert-success" role="alert">
+                            This email is accepted by the anti-phishing filter.
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                            <strong>DANGER!</strong> This email contains a malicious link.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,10 @@
+#victim-container {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#victim-container h1 {
+    text-align: center;
+}
