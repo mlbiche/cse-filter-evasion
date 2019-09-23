@@ -1,5 +1,5 @@
 const antiPhishingFilters = [
-    // TODO
+    noFilter
 ];
 
 let antiPhishingFilterIndex = 0;
@@ -41,6 +41,7 @@ function sendEmail() {
 
 /**
  * Parse the attacker email and display the corresponding alert
+ * @param email The attacker email
  */
 function parseEmail(email) {
     const filterAcceptAlert = document.getElementById('filter-accept');
