@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+
 <head>
     <title>Filter Evasion Demonstration</title>
-    
+
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="attacker-container.css" />
     <link rel="stylesheet" href="victim-container.css" />
@@ -10,12 +11,10 @@
         Bootstrap Stylesheet
         https://getbootstrap.com/docs/4.3/getting-started/introduction/
     -->
-    <link
-        rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
 <body>
     <div id="main-container">
         <div id="attacker-container">
@@ -27,10 +26,16 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <form>
+                        <form onsubmit="return sendEmail()">
                             <div class="form-group">
                                 <label for="email-preparation-input">Email preparation</label>
-                                <textarea class="form-control" id="email-preparation-input" rows="10"></textarea>
+                                <textarea class="form-control" id="email-preparation-input" rows="15"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="html-switch">
+                                    <label class="custom-control-label" for="html-switch">HTML</label>
+                                </div>
                             </div>
                             <button type="submit" class="btn btn-outline-light email-send-btn">Send !</button>
                         </form>
@@ -47,10 +52,10 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <select class="custom-select">
-                            <option value="no-filter" selected>No anti-phishing filter</option>
-                            <option value="filter-1">Phishing filter 1</option>
-                            <option value="filter-2">Phishing filter 2</option>
+                        <select class="custom-select" id="anti-phishing-filter-select" onchange="antiPhishingFilterChange()">
+                            <option value="0" selected>No anti-phishing filter</option>
+                            <option value="1">Phishing filter 1</option>
+                            <option value="2">Phishing filter 2</option>
                         </select>
                     </div>
                 </div>
@@ -68,10 +73,10 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <div class="alert alert-success filter-accept" role="alert">
+                        <div class="alert alert-success" id="filter-accept" role="alert">
                             This email is accepted by the anti-phishing filter.
                         </div>
-                        <div class="alert alert-danger filter-block" role="alert">
+                        <div class="alert alert-danger" id="filter-block" role="alert">
                             <strong>DANGER!</strong> This email contains a malicious link.
                         </div>
                     </div>
@@ -79,4 +84,6 @@
             </div>
         </div>
     </div>
+
+    <script src="index.js"></script>
 </body>

@@ -11,9 +11,15 @@
 
 #victim-container .email-row {
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-#victim-container .filter-accept,
-#victim-container .filter-block {
+#victim-container .email-row #email-content {
+    max-height: 50vh;
+    overflow: scroll;
+}
+
+#victim-container #filter-accept,
+#victim-container #filter-block {
     display: none;
 }
