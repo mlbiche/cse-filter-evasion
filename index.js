@@ -1,7 +1,8 @@
 const antiPhishingFilters = [
     noFilter,
     blackListFilter,
-    caseInsensitiveFilter
+    caseInsensitiveFilter,
+    baseFilter
 ];
 
 let antiPhishingFilterIndex = 0;

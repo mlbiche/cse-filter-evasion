@@ -13,9 +13,8 @@ function blackListFilter(email) {
      * If so, return false
      */
     BLACK_LIST.forEach(blackListedWebsite => {
-        if (email.search(blackListedWebsite) != -1) {
+        if (email.search(blackListedWebsite) != -1)
             accept = false;
-        }
     });
 
     return accept;
