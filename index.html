@@ -54,7 +54,7 @@
                     <div class="col">
                         <select class="custom-select" id="anti-phishing-filter-select" onchange="antiPhishingFilterChange()">
                             <option value="0" selected>No anti-phishing filter</option>
-                            <option value="1">Phishing filter 1</option>
+                            <option value="1">Black-list phishing filter</option>
                             <option value="2">Phishing filter 2</option>
                         </select>
                     </div>
@@ -85,6 +85,13 @@
         </div>
     </div>
 
-    <script src="filter/noFilter.js"></script>
-    <script src="index.js"></script>
+    <!-- Load the black list file -->
+    <script type="text/javascript" src="filter/loadBlackList.js"></script>
+
+    <!-- Load all the filters -->
+    <script type="text/javascript" src="filter/noFilter.js"></script>
+    <script type="text/javascript" src="filter/blackListFilter.js"></script>
+
+    <!-- Load the main JavaScript file -->
+    <script type="text/javascript" src="index.js"></script>
 </body>
